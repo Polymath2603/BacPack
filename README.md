@@ -8,31 +8,33 @@ APK.
 ## Layout
 
 ```
-papers/
-  maths/        YYYY-principal.pdf | 2017-rattrapage.pdf | 2017-remplacement.pdf
-  physics/      (same session naming)
-  electric/     (Electrical engineering / Technologie)
-  english/
-  histgeo/      (History & Geography)
-  islamic/
-  arabic/
-  french/
-  philosophy/
-  tamazight/
+past-exams/
+  index.json              {"subjects": ["arabic", "electric", …]}
+  <subject>/index.json    {"files": ["2008-principal.pdf", …]}
+  <subject>/YYYY-<session>.pdf
 ```
 
-- `principal` = Main session (June). Filenames are the API contract — don't
-  rename without updating the app's papers manifest.
-- Main session is complete for every subject; Replacement/Rattrapage sessions
-  are included only where a copy exists (2016–2017).
+Subjects: `maths`, `physics`, `electric` (Electrical engineering /
+Technologie), `english`, `histgeo` (History & Geography), `islamic`,
+`arabic`, `french`, `philosophy`, `tamazight`.
+
+- Sessions: `principal` (Main, June) · `remplacement` (Replacement) ·
+  `rattrapage` (Second try). Main session is complete for every subject;
+  Replacement/Rattrapage are included only where a copy exists (2016–2017).
+- Filenames are the API contract — don't rename without regenerating the
+  index files.
 - Most PDFs embed the official correction sections where the source document
   provided them.
 
 ## How the app uses this
 
-The app builds its download list from the raw GitHub URL of this repo plus
-`<subject>/<file>.pdf`. Adding a paper = drop the PDF in the subject folder
-and push. New files with existing names need no app update.
+The app fetches `past-exams/index.json` to discover subjects, then each
+`<subject>/index.json` for the available PDFs — no subject, session, or year
+list is hardcoded in the app, so new files appear after a push with no app
+update. Display names per language live in the app's string table.
+
+After changing the PDF tree, regenerate the indexes (from the BACBIT repo):
+`python3 tooling/gen_papers_index.py`, then commit + push.
 
 ## Status
 
