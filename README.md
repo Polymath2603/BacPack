@@ -10,9 +10,18 @@ APK.
 ```
 past-exams/
   index.json              {"subjects": ["arabic", "electric", …]}
-  <subject>/index.json    {"files": ["2008-principal.pdf", …]}
+  <subject>/index.json    {"files": [{"file": "2008-principal.pdf",
+                                        "size": 4825703,
+                                        "correction": false}, …]}
   <subject>/YYYY-<session>.pdf
 ```
+
+Per-subject index entries carry the PDF's `size` in bytes (so the app can show
+it before download) and a best-effort `correction` flag (true when the PDF
+embeds an official correction/model-answer section — detected heuristically
+from PDF text markers and page-count by `gen_papers_index.py`). Older plain
+string entries ("2008-principal.pdf") are still valid and the app treats them
+as {size: null, correction: false}.
 
 Subjects: `maths`, `physics`, `electric` (Electrical engineering /
 Technologie), `english`, `histgeo` (History & Geography), `islamic`,
@@ -34,7 +43,8 @@ list is hardcoded in the app, so new files appear after a push with no app
 update. Display names per language live in the app's string table.
 
 After changing the PDF tree, regenerate the indexes (from the BACBIT repo):
-`python3 tooling/gen_papers_index.py`, then commit + push.
+`python3 tooling/gen_papers_index.py`, then commit + push. Requires `pypdf`
+for the correction heuristic; without it, `correction` is emitted as `false`.
 
 ## Status
 

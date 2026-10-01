@@ -1,22 +1,94 @@
 {
   "files": [
-    "2009-principal.pdf",
-    "2010-principal.pdf",
-    "2011-principal.pdf",
-    "2012-principal.pdf",
-    "2013-principal.pdf",
-    "2014-principal.pdf",
-    "2015-principal.pdf",
-    "2016-principal.pdf",
-    "2017-principal.pdf",
-    "2017-remplacement.pdf",
-    "2018-principal.pdf",
-    "2019-principal.pdf",
-    "2020-principal.pdf",
-    "2021-principal.pdf",
-    "2022-principal.pdf",
-    "2023-principal.pdf",
-    "2024-principal.pdf",
-    "2025-principal.pdf"
+    {
+      "file": "2009-principal.pdf",
+      "size": 3496091,
+      "correction": false
+    },
+    {
+      "file": "2010-principal.pdf",
+      "size": 1615903,
+      "correction": false
+    },
+    {
+      "file": "2011-principal.pdf",
+      "size": 1260604,
+      "correction": false
+    },
+    {
+      "file": "2012-principal.pdf",
+      "size": 4681496,
+      "correction": false
+    },
+    {
+      "file": "2013-principal.pdf",
+      "size": 5060667,
+      "correction": false
+    },
+    {
+      "file": "2014-principal.pdf",
+      "size": 4990144,
+      "correction": false
+    },
+    {
+      "file": "2015-principal.pdf",
+      "size": 7617669,
+      "correction": false
+    },
+    {
+      "file": "2016-principal.pdf",
+      "size": 1806849,
+      "correction": true
+    },
+    {
+      "file": "2017-principal.pdf",
+      "size": 3264860,
+      "correction": true
+    },
+    {
+      "file": "2017-remplacement.pdf",
+      "size": 2528340,
+      "correction": true
+    },
+    {
+      "file": "2018-principal.pdf",
+      "size": 4316854,
+      "correction": true
+    },
+    {
+      "file": "2019-principal.pdf",
+      "size": 3887382,
+      "correction": true
+    },
+    {
+      "file": "2020-principal.pdf",
+      "size": 3111939,
+      "correction": true
+    },
+    {
+      "file": "2021-principal.pdf",
+      "size": 2422688,
+      "correction": true
+    },
+    {
+      "file": "2022-principal.pdf",
+      "size": 2964877,
+      "correction": true
+    },
+    {
+      "file": "2023-principal.pdf",
+      "size": 1897341,
+      "correction": true
+    },
+    {
+      "file": "2024-principal.pdf",
+      "size": 4428563,
+      "correction": false
+    },
+    {
+      "file": "2025-principal.pdf",
+      "size": 1219787,
+      "correction": false
+    }
   ]
 }
